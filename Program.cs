@@ -19,11 +19,11 @@ namespace MagCal
 	{
 		static void Main(string[] args)
 		{
-			string filename = @"mag.txt";
+			string filename = @"..\..\mag.txt";
 			int i;
 
 			// load measurement data
-			Matrix<double> data = DelimitedReader.Read<double>(filename, false, "\t", true);
+			Matrix<double> data = DelimitedReader.Read<double>(filename, false, "\t", false);
 
 			// create D 10xnumdata
 			Matrix<double> D = Matrix<double>.Build.Dense(10, data.RowCount);
